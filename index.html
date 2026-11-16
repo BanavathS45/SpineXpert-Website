@@ -34,7 +34,8 @@
     <link rel="stylesheet" href="assets/css/home-exact.css" />
     <link rel="stylesheet" href="assets/css/doctor.css" />
     <link rel="stylesheet" href="assets/css/hero-expert.css" />
-  </head>
+    <link rel="stylesheet" href="assets/css/smart-modal.css">
+</head>
   <body>
     <!-- Navigation Header -->
     <header class="header">
@@ -178,6 +179,28 @@
           <span class="ticker-bullet">&bull;</span>
         </div>
       </div>
+
+      <!-- Home Booking Banner with Live QR Code -->
+      <section style="padding: 36px 0 10px; background: #ffffff;">
+        <div class="container">
+          <div class="modal-portal-banner" data-aos="fade-up" style="margin-bottom: 0; border-radius: 18px; padding: 24px 32px; box-shadow: 0 14px 34px rgba(3, 52, 101, 0.16);">
+            <div class="portal-text-side">
+              <span class="portal-tag" style="background: rgba(0, 180, 216, 0.25); color: #00e5ff; font-size: 11px; padding: 4px 10px;">INSTANT CONFIRMATION</span>
+              <h3 class="portal-heading" style="font-size: 24px; margin: 8px 0 6px;">Direct Online Patient Booking</h3>
+              <p class="portal-subtext" style="font-size: 14px; margin-bottom: 18px; color: rgba(255, 255, 255, 0.85); max-width: 520px;">
+                Skip the wait &mdash; pick your exact preferred time slot directly on our live calendar portal or scan the QR code with your phone.
+              </p>
+              <a href="https://clinic.physioelitece.fit/patient-booking?token=clx_KrfnUzbXfuJDHYltwGSFXj6y" target="_blank" rel="noopener" class="portal-btn-link" style="padding: 12px 24px; font-size: 13.5px; font-weight: 800; letter-spacing: 0.5px;">
+                OPEN DIRECT BOOKING PORTAL &rarr;
+              </a>
+            </div>
+            <div class="portal-qr-box" style="padding: 12px; border-radius: 14px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);">
+              <img src="assets/images/booking-qr.png" alt="Scan QR to Book Appointment Online" style="width: 125px; height: 125px;">
+              <span class="portal-qr-label" style="font-size: 10.5px; margin-top: 6px; font-weight: 800;">SCAN TO BOOK</span>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <!-- Section 3: A calm clinic for precise spine care -->
       <section class="calm-clinic-section">
@@ -1503,84 +1526,119 @@
       </div>
     </footer>
 
-    <!-- Booking Appointment Modal -->
-    <div class="modal-overlay" id="bookingModal">
-      <div class="modal-card">
-        <div class="modal-header">
-          <h3 class="modal-title">Book an Appointment</h3>
-          <button class="modal-close" id="closeModal">&times;</button>
+        <!-- ============ SMART ENGAGEMENT MODAL (Exact design from Revive Clinic) ============ -->
+    <div class="smart-modal-overlay" id="smartEngagementModal" aria-hidden="true">
+      <div class="smart-modal-card" role="dialog" aria-modal="true" aria-labelledby="smartModalHeadline">
+        <!-- Header Bar -->
+        <div class="smart-modal-header">
+          <button class="smart-modal-close" id="smartModalClose" type="button" aria-label="Close modal">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+          <div class="smart-modal-tag" id="smartModalTag">
+            <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/>
+            </svg>
+            <span id="smartModalTagText">WELCOME TO SPINEXPERT</span>
+          </div>
+          <h3 class="smart-modal-headline" id="smartModalHeadline">Looking for Expert Spine &amp; Physiotherapy Consultation?</h3>
+          <p class="smart-modal-sub" id="smartModalSub">
+            Need relief from neck pain, back pain, sciatica, slip disc or posture issues? Book an appointment or request a quick callback from our spine specialist in Habsiguda.
+          </p>
         </div>
-                <div class="modal-body">
-          <!-- Direct Online Booking Banner & QR Code -->
-          <div class="modal-portal-banner">
-            <div class="portal-text-side">
-              <span class="portal-tag">INSTANT CONFIRMATION</span>
-              <h4 class="portal-heading">Direct Online Patient Booking</h4>
-              <p class="portal-subtext">Skip the wait — pick your exact preferred time slot directly on our live calendar portal.</p>
-              <a href="https://clinic.physioelitece.fit/patient-booking?token=clx_KrfnUzbXfuJDHYltwGSFXj6y" target="_blank" rel="noopener" class="portal-btn-link">
-                OPEN DIRECT BOOKING PORTAL &rarr;
-              </a>
-            </div>
-            <div class="portal-qr-box">
-              <img src="assets/images/booking-qr.png" alt="Scan QR to Book Appointment Online">
-              <span class="portal-qr-label">Scan to Book</span>
-            </div>
-          </div>
 
-          <div class="modal-divider">
-            <span>OR REQUEST APPOINTMENT BELOW</span>
-          </div>
-
-          <form id="appointmentForm">
-            <div class="form-group">
-              <label class="form-label">Full Name *</label>
-              <input
-                type="text"
-                class="form-input"
-                placeholder="Your name"
-                required
-              />
-            </div>
-            <div class="form-row">
-              <div class="form-group">
-                <label class="form-label">Phone *</label>
-                <input
-                  type="tel"
-                  class="form-input"
-                  placeholder="Phone number"
-                  required
-                />
-              </div>
-              <div class="form-group">
-                <label class="form-label">Preferred Date</label>
-                <input type="date" class="form-input" required />
-              </div>
-            </div>
-            <div class="form-group">
-              <label class="form-label">Treatment or Concern</label>
-              <select class="form-select" required>
-                <option value="">Select treatment type</option>
-                <option value="consultation">Initial Spine Assessment &amp; Consultation</option>
-                <option value="osteopathy">Osteopathy &amp; Whole-Body Alignment</option>
-                <option value="migraine">Migraine &amp; Cervicogenic Headache Care</option>
-                <option value="gut">Visceral Osteopathy &amp; Gut Health</option>
-                <option value="robospine">ROBOSPINE Decompression</option>
-                <option value="sciatica">Sciatica &amp; Disc Care</option>
-                <option value="neck">Neck &amp; Posture Adjustment</option>
-                <option value="sports">Sports Injury &amp; Physical Therapy</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label class="form-label">Notes or Pain Details</label>
-              <textarea
-                class="form-textarea"
-                placeholder="Describe symptoms or previous diagnoses..."
-              ></textarea>
-            </div>
-            <button type="submit" class="form-submit-btn">
-              CONFIRM APPOINTMENT REQUEST
+        <!-- Modal Body with 2 Tabs -->
+        <div class="smart-modal-body">
+          <div class="smart-tabs-nav">
+            <button type="button" class="smart-tab-btn active" id="tabBtnBooking" data-tab="bookingTab">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="18" height="18" x="3" y="4" rx="2" ry="2"/>
+                <line x1="16" x2="16" y1="2" y2="6"/>
+                <line x1="8" x2="8" y1="2" y2="6"/>
+                <line x1="3" x2="21" y1="10" y2="10"/>
+              </svg>
+              <span>Book Appointment</span>
             </button>
-          </form>
+            <button type="button" class="smart-tab-btn" id="tabBtnCallback" data-tab="callbackTab">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+              </svg>
+              <span>Request Callback</span>
+            </button>
+          </div>
+
+          <!-- Tab 1: Book Appointment (QR Code & Direct Link) -->
+          <div class="smart-tab-pane active" id="bookingTab">
+            <div class="smart-qr-card">
+              <div class="smart-qr-badge">
+                <span style="display:inline-block; width:6px; height:6px; background:#4ade80; border-radius:50%;"></span>
+                Instant Confirmed Slot
+              </div>
+              <h4 class="smart-qr-title">Direct Online Booking</h4>
+              <p class="smart-qr-desc">
+                Select your preferred doctor, date, and live consultation time slot directly on our patient portal.
+              </p>
+
+              <div class="smart-qr-content-split">
+                <div style="flex: 1;">
+                  <a href="https://clinic.physioelitece.fit/patient-booking?token=clx_KrfnUzbXfuJDHYltwGSFXj6y" 
+                     target="_blank" 
+                     rel="noopener" 
+                     class="smart-direct-btn">
+                    <span>Book Online Instantly &nearr;</span>
+                  </a>
+                  <p style="font-size: 0.78rem; color: #94a3b8; margin: 8px 0 0; line-height: 1.4;">
+                    Instant confirmation sent to your phone.
+                  </p>
+                </div>
+                <div class="smart-qr-image-wrap">
+                  <img src="assets/images/booking-qr.png" alt="Scan to Book Online" width="90" height="90" />
+                  <span>Scan to Book</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab 2: Request Call Back -->
+          <div class="smart-tab-pane" id="callbackTab">
+            <form id="smartCallbackForm">
+              <div style="display: flex; flex-direction: column; gap: 1rem;">
+                <div>
+                  <label class="smart-field-label">Your Name *</label>
+                  <div class="smart-input-wrap">
+                    <div class="smart-input-icon">
+                      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/>
+                        <circle cx="12" cy="7" r="4"/>
+                      </svg>
+                    </div>
+                    <input type="text" id="smartCallbackName" class="smart-input" required placeholder="Enter your full name" autocomplete="name" />
+                  </div>
+                </div>
+
+                <div>
+                  <label class="smart-field-label">Phone Number *</label>
+                  <div class="smart-input-wrap">
+                    <div class="smart-input-icon">
+                      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                      </svg>
+                    </div>
+                    <input type="tel" id="smartCallbackPhone" class="smart-input" required placeholder="Enter 10-digit mobile number" inputmode="numeric" pattern="[0-9+ -]{10,16}" autocomplete="tel" />
+                  </div>
+                </div>
+
+                <button type="submit" class="smart-wa-submit-btn">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                    <path d="M20.52 3.48A11.93 11.93 0 0 0 12.04 0C5.46 0 .1 5.36.1 11.94c0 2.1.55 4.15 1.6 5.96L0 24l6.28-1.65a11.9 11.9 0 0 0 5.76 1.48h.01c6.57 0 11.93-5.36 11.93-11.94 0-3.19-1.24-6.19-3.46-8.41ZM12.05 21.8a9.88 9.88 0 0 1-5.04-1.38l-.36-.21-3.74.98 1-3.64-.23-.37a9.87 9.87 0 0 1-1.52-5.24C2.16 6.5 6.6 2.06 12.05 2.06c2.64 0 5.12 1.03 6.98 2.89a9.82 9.82 0 0 1 2.9 6.99c0 5.45-4.44 9.86-9.88 9.86Zm5.42-7.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.05 1.03-1.05 2.51s1.08 2.91 1.23 3.11c.15.2 2.12 3.24 5.14 4.54.72.31 1.28.5 1.72.64.72.23 1.38.2 1.9.12.58-.09 1.76-.72 2.01-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35Z"/>
+                  </svg>
+                  <span>Request Callback via WhatsApp</span>
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </div>
@@ -1588,5 +1646,6 @@
     <script src="assets/js/aos.js"></script>
     <script src="assets/js/google-reviews.js"></script>
     <script src="assets/js/main.js"></script>
-  </body>
+    <script src="assets/js/smart-modal.js"></script>
+</body>
 </html>

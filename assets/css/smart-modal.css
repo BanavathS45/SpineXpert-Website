@@ -1,0 +1,336 @@
+/* ==========================================================================
+   SMART ENGAGEMENT MODAL (Identical styling to Revive Clinic)
+   ========================================================================== */
+
+.smart-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(11, 19, 37, 0.75);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.smart-modal-overlay.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.smart-modal-card {
+  background: #ffffff;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 500px;
+  max-height: 92vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.35);
+  overflow: hidden;
+  position: relative;
+  transform: scale(0.94);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.smart-modal-overlay.is-open .smart-modal-card {
+  transform: scale(1);
+}
+
+.smart-modal-header {
+  background: linear-gradient(135deg, #033465 0%, #056fa8 60%, #e2503c 100%);
+  color: #ffffff;
+  padding: 1.3rem 1.5rem 1.1rem;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.smart-modal-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: #ffffff;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  padding: 0;
+}
+
+.smart-modal-close:hover {
+  background: rgba(255, 255, 255, 0.35);
+  transform: rotate(90deg);
+}
+
+.smart-modal-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.25rem 0.75rem;
+  border-radius: 50px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.6rem;
+}
+
+.smart-modal-headline {
+  font-size: 1.25rem;
+  font-weight: 800;
+  line-height: 1.3;
+  margin: 0;
+  color: #ffffff;
+  font-family: var(--font-serif);
+}
+
+.smart-modal-sub {
+  font-size: 0.86rem;
+  color: rgba(255, 255, 255, 0.92);
+  margin: 0.5rem 0 0;
+  line-height: 1.5;
+}
+
+.smart-modal-body {
+  padding: 1.3rem 1.4rem;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  flex: 1;
+}
+
+/* Two Tabs */
+.smart-tabs-nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.6rem;
+  margin-bottom: 1.2rem;
+}
+
+.smart-tab-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 0.8rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  border-radius: 10px;
+  border: 1.5px solid #cbd5e1;
+  background: #ffffff;
+  color: #475569;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.smart-tab-btn.active {
+  font-weight: 800;
+  border-color: #056fa8;
+  background: rgba(5, 111, 168, 0.08);
+  color: #033465;
+  box-shadow: 0 4px 12px rgba(5, 111, 168, 0.15);
+}
+
+.smart-tab-btn svg {
+  flex-shrink: 0;
+  color: #64748b;
+}
+
+.smart-tab-btn.active svg {
+  color: #056fa8;
+}
+
+/* Tab Content Panels */
+.smart-tab-pane {
+  display: none;
+}
+
+.smart-tab-pane.active {
+  display: block;
+  animation: smartFadeIn 0.25s ease;
+}
+
+@keyframes smartFadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* QR Code & Direct Booking Card */
+.smart-qr-card {
+  background: linear-gradient(135deg, #071d33 0%, #031526 100%);
+  color: #ffffff;
+  border-radius: 14px;
+  padding: 1.3rem;
+  border: 1px solid rgba(0, 180, 216, 0.35);
+  box-shadow: 0 10px 25px -8px rgba(3, 52, 101, 0.5);
+}
+
+.smart-qr-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #4ade80;
+  background: rgba(74, 222, 128, 0.12);
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  margin-bottom: 0.6rem;
+}
+
+.smart-qr-title {
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin: 0 0 0.4rem;
+  color: #ffffff;
+  font-family: var(--font-serif);
+}
+
+.smart-qr-desc {
+  font-size: 0.85rem;
+  color: #cbd5e1;
+  line-height: 1.45;
+  margin: 0 0 1.1rem;
+}
+
+.smart-qr-content-split {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+}
+
+@media (max-width: 440px) {
+  .smart-qr-content-split {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+}
+
+.smart-qr-image-wrap {
+  background: #ffffff;
+  padding: 8px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+}
+
+.smart-qr-image-wrap img {
+  width: 95px;
+  height: 95px;
+  display: block;
+  object-fit: contain;
+}
+
+.smart-qr-image-wrap span {
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: #033465;
+  margin-top: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.smart-direct-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  background: linear-gradient(135deg, #e2503c, #c93f2e);
+  color: #ffffff;
+  padding: 0.85rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  box-shadow: 0 8px 20px -6px rgba(226, 80, 60, 0.5);
+}
+
+.smart-direct-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px -6px rgba(226, 80, 60, 0.65);
+  color: #ffffff;
+}
+
+/* Form inputs */
+.smart-field-label {
+  display: block;
+  font-size: 0.84rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 0.35rem;
+}
+
+.smart-input-wrap {
+  position: relative;
+}
+
+.smart-input-icon {
+  position: absolute;
+  left: 11px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #94a3b8;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+}
+
+.smart-input {
+  width: 100%;
+  padding: 0.7rem 0.75rem 0.7rem 2.3rem;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  font-size: 0.9rem;
+  outline: none;
+  box-sizing: border-box;
+  font-family: inherit;
+  transition: border-color 0.2s ease;
+}
+
+.smart-input:focus {
+  border-color: #056fa8;
+}
+
+.smart-wa-submit-btn {
+  margin-top: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  background: #25d366;
+  color: #ffffff;
+  padding: 0.85rem 1.4rem;
+  border-radius: 8px;
+  border: none;
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(37, 211, 102, 0.35);
+  transition: all 0.2s ease;
+  font-family: inherit;
+  width: 100%;
+}
+
+.smart-wa-submit-btn:hover {
+  background: #20ba5a;
+  transform: translateY(-1px);
+}
+

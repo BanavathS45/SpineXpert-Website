@@ -47,28 +47,56 @@ document.addEventListener('DOMContentLoaded', () => {
   const openBtns = document.querySelectorAll('[data-open-booking]');
   const closeBtn = document.getElementById('closeModal');
 
+  function openBookingModal() {
+    if (!modal) return;
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeBookingModal() {
+    if (!modal) return;
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
   if (modal) {
     openBtns.forEach(btn => {
       btn.addEventListener('click', (e) => {
         e.preventDefault();
-        modal.classList.add('active');
-        document.body.style.overflow = 'hidden';
+        openBookingModal();
       });
     });
 
     if (closeBtn) {
       closeBtn.addEventListener('click', () => {
-        modal.classList.remove('active');
-        document.body.style.overflow = '';
+        closeBookingModal();
       });
     }
 
     modal.addEventListener('click', (e) => {
       if (e.target === modal) {
-        modal.classList.remove('active');
-        document.body.style.overflow = '';
+        closeBookingModal();
       }
     });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal.classList.contains('active')) {
+        closeBookingModal();
+      }
+    });
+
+    // 10-Second Auto-Engagement Modal (Same mechanism as Revive Clinic)
+    // Pops up after 10 seconds if not already dismissed in this session
+    const hasTriggeredAutoModal = sessionStorage.getItem('spinexpert_modal_seen');
+    if (!hasTriggeredAutoModal) {
+      setTimeout(() => {
+        // Only open if the user hasn't already opened it or interacted
+        if (!modal.classList.contains('active')) {
+          openBookingModal();
+          sessionStorage.setItem('spinexpert_modal_seen', 'true');
+        }
+      }, 10000); // exactly 10 seconds
+    }
   }
 
   // FAQ Accordion functionality
