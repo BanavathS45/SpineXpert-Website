@@ -1,0 +1,153 @@
+{
+  "id": "ChIJw0Ah-FGZyzsRN5Q74vncgqk",
+  "formattedAddress": "Flat. No. 203, 2nd Floor, Sai Sampada Plaza, Vijayanagar Colony, Vikrampuri, Habsiguda, Secunderabad, Hyderabad, Telangana 500007, India",
+  "rating": 5,
+  "regularOpeningHours": {
+    "openNow": true,
+    "periods": [
+      {
+        "open": {
+          "day": 0,
+          "hour": 9,
+          "minute": 30
+        },
+        "close": {
+          "day": 0,
+          "hour": 21,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 1,
+          "hour": 9,
+          "minute": 0
+        },
+        "close": {
+          "day": 1,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 9,
+          "minute": 0
+        },
+        "close": {
+          "day": 2,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 9,
+          "minute": 0
+        },
+        "close": {
+          "day": 3,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 9,
+          "minute": 0
+        },
+        "close": {
+          "day": 4,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 9,
+          "minute": 0
+        },
+        "close": {
+          "day": 5,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 9,
+          "minute": 0
+        },
+        "close": {
+          "day": 6,
+          "hour": 22,
+          "minute": 0
+        }
+      }
+    ],
+    "weekdayDescriptions": [
+      "Monday: 9:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Tuesday: 9:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Wednesday: 9:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Thursday: 9:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Friday: 9:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Saturday: 9:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Sunday: 9:30\u202fAM\u2009\u2013\u20099:00\u202fPM"
+    ],
+    "nextCloseTime": "2026-11-16T16:30:00Z"
+  },
+  "userRatingCount": 2,
+  "displayName": {
+    "text": "The SpineXpert",
+    "languageCode": "en"
+  },
+  "reviews": [
+    {
+      "name": "places/ChIJw0Ah-FGZyzsRN5Q74vncgqk/reviews/Ci9DQUlRQUNvZENodHljRjlvT2pGMWNqTTBNWEZRUlZaQ1ZXaEhWRlZSU0dwMVpFRRAB",
+      "relativePublishTimeDescription": "in the last week",
+      "rating": 5,
+      "text": {
+        "text": "One of the best chiropractor and physiotherapy",
+        "languageCode": "en"
+      },
+      "originalText": {
+        "text": "One of the best chiropractor and physiotherapy",
+        "languageCode": "en"
+      },
+      "authorAttribution": {
+        "displayName": "Mir Awad Ali",
+        "uri": "https://www.google.com/maps/contrib/116164491317687378650/reviews",
+        "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocJ7QRzkL4yoCeAMZDhDXvIUL3RoVhZYk6MMnlRo1x0PDYdH1A=s128-c0x00000000-cc-rp-mo"
+      },
+      "publishTime": "2026-11-13T14:30:18.381047959Z",
+      "flagContentUri": "https://www.google.com/local/content/rap/report?postId=Ci9DQUlRQUNvZENodHljRjlvT2pGMWNqTTBNWEZRUlZaQ1ZXaEhWRlZSU0dwMVpFRRAB&d=17924085&t=1&wv=1",
+      "googleMapsUri": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2pGMWNqTTBNWEZRUlZaQ1ZXaEhWRlZSU0dwMVpFRRAB!2m1!1s0x3bcb9951f82140c3:0xa982dcf9e23b9437"
+    },
+    {
+      "name": "places/ChIJw0Ah-FGZyzsRN5Q74vncgqk/reviews/Ci9DQUlRQUNvZENodHljRjlvT21oc1EycEZiRlpuWmtsd1RsUm5OVnBMUmtaR2IwRRAB",
+      "relativePublishTimeDescription": "in the last week",
+      "rating": 5,
+      "text": {
+        "text": "Best ostoipathy doctor available here .",
+        "languageCode": "en"
+      },
+      "originalText": {
+        "text": "Best ostoipathy doctor available here .",
+        "languageCode": "en"
+      },
+      "authorAttribution": {
+        "displayName": "Mir Eshaan Ali",
+        "uri": "https://www.google.com/maps/contrib/104006073342974546794/reviews",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjUBe6axwqipaIMlC410Rqtv7CX-vNG-r3SAYNJg12axhYau7LWc=s128-c0x00000000-cc-rp-mo-ba3"
+      },
+      "publishTime": "2026-11-13T14:29:01.150804309Z",
+      "flagContentUri": "https://www.google.com/local/content/rap/report?postId=Ci9DQUlRQUNvZENodHljRjlvT21oc1EycEZiRlpuWmtsd1RsUm5OVnBMUmtaR2IwRRAB&d=17924085&t=1&wv=1",
+      "googleMapsUri": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT21oc1EycEZiRlpuWmtsd1RsUm5OVnBMUmtaR2IwRRAB!2m1!1s0x3bcb9951f82140c3:0xa982dcf9e23b9437"
+    }
+  ]
+}
