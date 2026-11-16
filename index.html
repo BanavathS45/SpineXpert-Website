@@ -1494,7 +1494,7 @@
         </div>
 
         <div class="footer-bottom">
-          <div>&copy; 2026 SpineXpert. All rights reserved.</div>
+          <div>&copy; 2026 SpineXpert. All rights reserved. <span class="footer-credit">| Developed by <a href="https://www.chiselontechnologies.com/" target="_blank" rel="noopener" class="developer-link"><strong>Chiselon Technologies Private Limited</strong></a></span></div>
           <div class="footer-disclaimer">
             Patient stories and blog articles on this site are illustrative
             sample content for demonstration, not verified medical claims.
@@ -1510,7 +1510,27 @@
           <h3 class="modal-title">Book an Appointment</h3>
           <button class="modal-close" id="closeModal">&times;</button>
         </div>
-        <div class="modal-body">
+                <div class="modal-body">
+          <!-- Direct Online Booking Banner & QR Code -->
+          <div class="modal-portal-banner">
+            <div class="portal-text-side">
+              <span class="portal-tag">INSTANT CONFIRMATION</span>
+              <h4 class="portal-heading">Direct Online Patient Booking</h4>
+              <p class="portal-subtext">Skip the wait — pick your exact preferred time slot directly on our live calendar portal.</p>
+              <a href="https://clinic.physioelitece.fit/patient-booking?token=clx_KrfnUzbXfuJDHYltwGSFXj6y" target="_blank" rel="noopener" class="portal-btn-link">
+                OPEN DIRECT BOOKING PORTAL &rarr;
+              </a>
+            </div>
+            <div class="portal-qr-box">
+              <img src="assets/images/booking-qr.png" alt="Scan QR to Book Appointment Online">
+              <span class="portal-qr-label">Scan to Book</span>
+            </div>
+          </div>
+
+          <div class="modal-divider">
+            <span>OR REQUEST APPOINTMENT BELOW</span>
+          </div>
+
           <form id="appointmentForm">
             <div class="form-group">
               <label class="form-label">Full Name *</label>
@@ -1540,13 +1560,14 @@
               <label class="form-label">Treatment or Concern</label>
               <select class="form-select" required>
                 <option value="">Select treatment type</option>
-                <option value="consultation">
-                  Initial Spine Assessment & Consultation
-                </option>
+                <option value="consultation">Initial Spine Assessment &amp; Consultation</option>
+                <option value="osteopathy">Osteopathy &amp; Whole-Body Alignment</option>
+                <option value="migraine">Migraine &amp; Cervicogenic Headache Care</option>
+                <option value="gut">Visceral Osteopathy &amp; Gut Health</option>
                 <option value="robospine">ROBOSPINE Decompression</option>
-                <option value="sciatica">Sciatica & Disc Care</option>
-                <option value="neck">Neck & Posture Adjustment</option>
-                <option value="sports">Sports Injury & Physical Therapy</option>
+                <option value="sciatica">Sciatica &amp; Disc Care</option>
+                <option value="neck">Neck &amp; Posture Adjustment</option>
+                <option value="sports">Sports Injury &amp; Physical Therapy</option>
               </select>
             </div>
             <div class="form-group">
